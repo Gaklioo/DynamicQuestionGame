@@ -46,7 +46,7 @@ void inputFile() {
 		}
 		awnserFile.close();
 	}
-	//ISSUE HERE. <- SOLVED.
+	//ISSUE HERE. <- SOLVED. // SPLIT AWNSERS INTO VECTIR
 	for (int i = 0; i < awnserList.size(); i++) {
 		std::string loopString = awnserList[i];
 		std::string awnserString;
@@ -57,7 +57,7 @@ void inputFile() {
 			awnserFormatted.push_back(awnserString);
 		}
 	}
-
+	// FORMAT AWNSERS SO EACH LINE OF awList.txt IS ONE ELEMENT IN A VECTOR
 	for (int i = 0; i < awnserFormatted.size(); i++) {
 		std::string loopString = awnserFormatted[i];
 		std::string awnserString;
@@ -123,9 +123,7 @@ void inputFile() {
 							incorrectAwnsers++;
 						}
 					}
-				}
-				else
-					continue;
+				}else { continue; } // IF LOOPSTRING IS EMPTY, HAPPENS BECAUSE OF FORMATTED AWNSER PUSHES AWNSER, BLANK LINE, AWNSER.
 			}
 			break;
 		}
