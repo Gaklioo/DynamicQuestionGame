@@ -119,7 +119,7 @@ void inputFile() {
 							correctAwnsers++;
 							std::cout << "Correct!" << std::endl;
 						}
-						else if (response != correctAwnser[k]) {
+						else if (response != correctAwnser[k]) { // I have no clue why this doesn't work like I want it to.
 							incorrectAwnsers++;
 						}
 					}
